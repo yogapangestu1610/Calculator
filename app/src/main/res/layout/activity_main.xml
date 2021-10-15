@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/tv_awal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Silakan Masukan Angka"
+        android:textSize="35dp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp" />
+
+    <EditText
+        android:id="@+id/et_angka_pertama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Masukan Angka"
+        android:inputType="number"
+        android:layout_below="@+id/tv_awal"/>
+
+    <EditText
+        android:id="@+id/et_angka_kedua"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Masukan Angka"
+        android:inputType="number"
+        android:layout_below="@+id/et_angka_pertama"/>
+
+    <LinearLayout
+        android:id="@+id/ll_operator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/et_angka_kedua">
+
+        <Button
+            android:id="@+id/btn_clear"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:onClick="clear"
+            android:text="C"/>
+
+        <Button
+            android:id="@+id/btn_tambah"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:onClick="tambah"
+            android:text="+"
+            tools:ignore="onClick"/>
+
+        <Button
+            android:id="@+id/btn_kali"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:onClick="kali"
+            android:text="*"
+            tools:ignore="onClicK"/>
+
+        <Button
+            android:id="@+id/btn_bagi"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:onClick="bagi"
+            android:text="/"/>
+
+        <Button
+            android:id="@+id/btn_kurang"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:onClick="kurang"
+            android:text="-"/>
+
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_text_hasil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hasil"
+        android:textSize="35dp"
+        android:textStyle="bold"
+        android:layout_below="@+id/ll_operator"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp" />
+
+    <TextView
+        android:id="@+id/tv_hasil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="35dp"
+        android:textStyle="bold"
+        android:layout_below="@+id/tv_text_hasil"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp" />
+
+
+</RelativeLayout>
